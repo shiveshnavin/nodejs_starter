@@ -1,34 +1,12 @@
-var express=require('express')
-var app=express()
-var hbs=require('express-handlebars')
-var path=require('path')
+module.exports=(app,express,callbacks)=>{
 
-app.engine('hbs',hbs({
-    extname:"hbs"
-}))
+    var module = {};
 
+    module.Transaction=require('./app/models/np_transaction.model.js')
+    module.User=require('./app/models/np_user.model.js')
 
-app.set('view engine','hbs')
-app.use(express.static(path.join(__dirname,'public')))
+    require('./app/routes/payment_route.js')(app,express,callbacks) 
 
-app.get('/',function(req,res){
-
-
-    res.render('index',{
-
-        head:"Hello World !",
-        body:{
-            main_para_head:"Hello There !",
-            main_para:"This is an empty NodeJS and ExpressJS app with Handlebars . You can use it to quickly start building apps on top of it ."
-            
-        }
-
-    })
-
-
-})
-
-
-app.listen('8080',function(){
-    console.log('Server Started');
-})
+    return module;
+};
+ 

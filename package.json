@@ -1,29 +1,38 @@
 {
-  "name": "nodejs_starter",
-  "version": "1.0.0",
-  "description": "Empty NodeJS app with Handlerbars and Http",
+  "name": "node-paytmpg",
+  "version": "1.1.7",
+  "description": "Paytm Gateway Integration using NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node example.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shiveshnavin/nodejs_starter.git"
+    "url": "git+https://github.com/shiveshnavin/node_paytm.git"
   },
   "keywords": [
-    "node",
-    "starter"
+    "nodejs",
+    "paytm",
+    "payment",
+    "gateway",
+    "paytm",
+    "api",
+    "paytm",
+    "nodejs"
   ],
   "author": "Shivesh Navin",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shiveshnavin/nodejs_starter/issues"
+    "url": "https://github.com/shiveshnavin/node_paytm/issues"
   },
-  "homepage": "https://github.com/shiveshnavin/nodejs_starter#readme",
+  "homepage": "https://github.com/shiveshnavin/node_paytm#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "file": "^0.2.2",
-    "path": "^0.12.7"
+    "body-parser": "^1.18.3",
+    "crypto": "^1.0.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.4.16",
+    "request": "^2.88.0",
+    "util": "^0.11.1"
   }
 }
